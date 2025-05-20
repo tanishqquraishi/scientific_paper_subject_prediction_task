@@ -29,7 +29,7 @@ torch==2.0.0+cu117
 torch-geometric==2.6.1
 ```
 
-#### Approach 
+### Approach 
 This project benchmarks a Graph Convolutional Network (GCN) against a simple Logistic Regression model using 10 fold cross validation. 
 The GCN approach is benchmarked upon a simple logistic regression model without the citation network features, 
 to that end, an initial accuracy of 77.58%, shows an ~8% improvement with the GCN that includes the citation network features. 
