@@ -2,13 +2,11 @@ import argparse
 import torch
 import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
-import numpy as np
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import accuracy_score
 from data_loader import load_cora_content
 
 # Argument parser for command line running
-
 parser = argparse.ArgumentParser(description="Train GCN on Cora dataset.")
 parser.add_argument('--content', type=str, required=True, help="Path to cora.content file")
 parser.add_argument('--cites', type=str, required=True, help="Path to cora.cites file")
@@ -19,7 +17,7 @@ X, y, paper_ids, label_to_index, index_to_label, df = load_cora_content(args.con
 
 # Build citation graph
 def load_edge_index(cites_path, paper_ids):
-    paper_id_to_idx = {str(pid): idx for idx, pid in enumerate(paper_ids)}  # Force string keys
+    paper_id_to_idx = {str(pid): idx for idx, pid in enumerate(paper_ids)}  
     edge_list = []
     missing = 0
 
@@ -61,7 +59,7 @@ all_preds = torch.zeros(len(labels), dtype=torch.long)
 
 for fold, (train_idx, test_idx) in enumerate(skf.split(features, labels)):
     model = GCN(input_dim=features.shape[1], hidden_dim=16, output_dim=len(label_to_index))
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=5e-4)
 
     for epoch in range(100):
         model.train()
