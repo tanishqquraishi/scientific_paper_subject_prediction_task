@@ -52,7 +52,7 @@ python gcn.py --content path/to/cora.content --cites path/to/cora.cites
 
 ##### Approach 
 This project benchmarks a Graph Convolutional Network (GCN) against a simple Logistic Regression model using 10 fold cross validation. 
-The GCN approach is benchmarked upon a simple logistic regression model without the citation network features. This is to first test for data quality and estimate initial performance, without
+The GCN approach is benchmarked upon a logistic regression model without the citation network features. This is to first test for data quality and estimate initial performance, without
 overcomplicating the model choice. To that end, an initial accuracy of 77.58% later shows an ~8% relative improvement with the GCN that includes the citation network features. 
 The final accuracy of approximately 83% is based on a hyperparameter grid search that automatizes various permutations of the hyperparameters, specifically the hidden layers, learning rate and optimizers. 
 The hyperparameter grid search resulted in the best configuration of (16, 0.005 and Adam) respectively.The underlying assumption of this pipeline is that similar papers are not only likely to belong to the same subject category, but also more likely to reference each other within the citation graph. The overall pipeline suggests that citation network features enhance classification performance based on not only bag of words features, but also the citation network. 
