@@ -32,7 +32,7 @@ torch-geometric==2.6.1
 
 #### Approach 
 This project benchmarks a Graph Convolutional Network (GCN) against a simple Logistic Regression model using 10 fold cross validation. 
-The GCN approach is benchmarked upon a simple logistic regression model without the citation network features, 
-to that end, an initial accuracy of 77.58%, shows an ~8% improvement with the GCN that includes the citation network features. 
+The GCN approach is benchmarked upon a simple logistic regression model without the citation network features. To that end, an initial accuracy of 77.58%, 
+shows an ~8% improvement with the GCN that includes the citation network features. 
 The final accuracy of 83.94% is based on a hyperparameter grid search that automatizes various permutations of the hyperparameters, specifically the hidden layers, learning rate and optimizers. 
-The hyperparameter grid search resulted in the best configuration of (16, 0.005 and Adam) respectively. 
+The hyperparameter grid search resulted in the best configuration of (16, 0.005 and Adam) respectively. The overall pipeline suggests that citation network features improve the prediction task.
