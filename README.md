@@ -10,7 +10,8 @@ A machine learning pipeline to predict the subjects of scientific papers from th
 2. `gcn.py` – Trains a Graph Convolutional Network (GCN)  
 3. `logistic_regression.py` – Trains a Logistic Regression baseline model (without citation features)  
 4. `gcn_hyperparameter_tuning.py` – Performs hyperparameter search for the GCN  
-
+5. predictions_logistic_regression.tsv - Baseline predictions
+6. gcn_predictions.tsv - Final predictions (!note: for submission)
 ---
 
 ## Requirements
