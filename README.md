@@ -36,7 +36,8 @@ torch-geometric==2.6.1
 ```
 python gcn.py --content path/to/cora.content --cites path/to/cora.cites
 ```
-4. Optional:
+4. Optional
+   
    Test the baseline model with:
    ```
    python logistic_baseline.py --content path/to/cora.content
