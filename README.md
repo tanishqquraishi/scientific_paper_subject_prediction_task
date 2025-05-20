@@ -15,6 +15,7 @@ A machine learning pipeline to predict the subjects of scientific papers from th
 ---
 
 ## Requirements
+Python==3.11.0
 
 ### Built-in Modules
 - `argparse`
@@ -24,7 +25,6 @@ A machine learning pipeline to predict the subjects of scientific papers from th
 ```txt
 numpy==1.24.3
 pandas==2.2.2
-python==3.11.0
 scikit-learn==1.5.2
 torch==2.0.0+cu117
 torch-geometric==2.6.1
